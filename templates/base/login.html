@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>olderManBaseHTML</title>
+    <style>
+    body {
+        margin: 0;
+    }
+    #h{
+        overflow: hidden;
+    }
+    .login{
+        position: relative;
+        top:-20px;
+        width: 100px;
+        height: 100px;
+        list-style-type: none;
+        margin: 0;
+        color: black;
+        background: #efeaea;
+        border: #efeaea;
+        text-align: center;
+        font-size: 1em;
+    }
+    .login:hover{
+        color: cornflowerblue;
+        text-decoration: underline;
+    }
+    </style>
+    <link rel="stylesheet" href="/static/css/base.css" type="text/css">
+    <link rel="icon" href="/static/img/kangyi.png">
+</head>
+<body>
+
+<p class="icon">抗疫康养系统</p>
+<div class="directory">
+    <button class="_title" onclick="window.location.href='/personalFile/personalHealth'">个人健康档案</button><br>
+    <button class="_title" onclick="window.location.href='/callCenter/callCenter'">呼叫中心</button><br>
+    <button class="_title" onclick="window.location.href='/BigDataAnalysis/yiqingAnalysis'">疫情分析</button><br>
+    <button class="_title" onclick="window.location.href='/BigDataAnalysis/yiqingmap'">疫情地图</button><br>
+    <button class="_title" onclick="window.location.href='/EpidemicKnowledgeBase/knowledge'">健康知识库</button><br>
+</div>
+<div class="information" id="h">
+    <div class="tuichu">
+        <button class="login" onclick="window.location.href='/old/login/input'">登录</button>
+        <button class="login" onclick="window.location.href='/old'">退出</button>
+        <button class="login" onclick="window.location.href='/old/login/zc'">注册</button>
+    </div>
+    <p class="welcome">欢迎进入抗疫康养系统</p>
+</div>
+<p class="news">新闻轮播</p>
+<p class="version">版本号</p>
+<div class="main">
+    <img class="imgkangyi" src="/static/img/kangyi.png" alt="kangyi">
+</div>
+
+</body>
+</html>

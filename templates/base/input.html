@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>olderManBaseHTML</title>
+    <style>
+    body {
+        margin: 0;
+    }
+    #h{
+        overflow: hidden;
+    }
+
+    input[type=submit] {
+    font-family: inherit;
+}
+
+input[type=text] {
+    border: 1px solid #ddd;
+}
+
+input[name=year] {
+    width: 50px;
+}
+
+.btn {
+    font-size: 12px;
+    padding: 3px 5px;
+    text-decoration: none;
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    border: 1px solid #555555;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    text-decoration: none;
+    background-color: black;
+    color: white;
+    border: 1px solid black;
+}
+    </style>
+    <link rel="stylesheet" href="/static/css/base.css" type="text/css">
+    <link rel="icon" href="/static/img/kangyi.png">
+</head>
+<body>
+
+<p class="icon">抗疫康养系统</p>
+<div class="directory">
+    <button class="_title" onclick="window.location.href='/personalFile/personalHealth'">个人健康档案</button><br>
+    <button class="_title" onclick="window.location.href='/callCenter/callCenter'">呼叫中心</button><br>
+    <button class="_title" onclick="window.location.href='/BigDataAnalysis/yiqingAnalysis'">疫情分析</button><br>
+    <button class="_title" onclick="window.location.href='/BigDataAnalysis/yiqingmap'">疫情地图</button><br>
+    <button class="_title" onclick="window.location.href='/EpidemicKnowledgeBase/knowledge'">健康知识库</button><br>
+</div>
+<div class="information" id="h">
+    <div class="tuichu">
+        <button class="login" onclick="window.location.href='/old/login/input'">登录</button>
+        <button class="login" onclick="window.location.href='/old'">退出</button>
+        <button class="login" onclick="window.location.href='/old/login/zc'">注册</button>
+    </div>
+    <p class="welcome">欢迎进入抗疫康养系统</p>
+</div>
+<p class="news">新闻轮播</p>
+<p class="version">版本号</p>
+<div class="main">
+    <img class="imgkangyi" src="/static/img/kangyi.png" alt="kangyi">
+    <form method="post">
+    Username<br>
+        <label>
+            <input type="text" name="name" required>
+        </label><br><br>
+    Password<br>
+        <label>
+            <input type="password" name="pwd" required>
+        </label><br><br>
+        <input class="btn" type="submit" name="submit" value="Submit">
+    </form>
+</div>
+
+</body>
+</html>

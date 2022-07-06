@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>olderManBaseHTML</title>
+    <style>
+        input[type=text] {
+            width: 130px;
+            box-sizing: border-box;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+            background-color: white;
+            background-image: url('/static/img/searchicon.png');
+            background-position: 10px 10px;
+            background-repeat: no-repeat;
+            padding: 12px 20px 12px 40px;
+            -webkit-transition: width 0.4s ease-in-out;
+            transition: width 0.4s ease-in-out;
+            position: relative;
+            top:-32px;
+        }
+        input[type=text]:focus {
+            width: 100%;
+        }
+    body {
+        margin: 0;
+    }
+    #dropbtn {
+        background-color: #cbf6f8;
+        color: #505050;
+        border: 1px solid #cccccc;
+        border-radius: 5px;
+        width:160px;
+        height: 32px;
+        font-size: 16px;
+        cursor: pointer;
+        position: relative;
+        top:1px;
+    }
+    .link{
+        width: 800px;
+        height: 1px;
+        border-bottom: solid;
+    }
+    #drop{
+        position: absolute;
+        top:90px;
+        left: 190px;
+    }
+    .hidden{
+        background-color: #ffffff;
+        color: #505050;
+        border: 1px solid #cccccc;
+        border-radius: 5px;
+        width:160px;
+        height: 32px;
+        font-size: 16px;
+        cursor: pointer;
+        position: relative;
+        top:-34px;
+        left: 160px;
+    }
+    .imgkangyi{
+        position: absolute;
+        width: 30%;
+        height: 66%;
+        top:80px;
+        left: 500px;
+        opacity:0.1;
+    }
+    </style>
+    <link rel="stylesheet" href="/static/css/base.css" type="text/css">
+    <link rel="icon" href="/static/img/kangyi.png">
+    <link rel="icon" href="/static/img/searchicon.png">
+</head>
+<body>
+
+<p class="icon">抗疫康养系统</p>
+<div class="directory">
+    <button class="_title" onclick="window.location.href='/personalFile/personalHealth'">个人健康档案</button><br>
+    <button class="_title" onclick="window.location.href='/callCenter/callCenter'">呼叫中心</button><br>
+    <button class="_title" onclick="window.location.href='/BigDataAnalysis/yiqingAnalysis'">疫情分析</button><br>
+    <button class="_title" onclick="window.location.href='/BigDataAnalysis/yiqingmap'">疫情地图</button><br>
+    <button class="_title" onclick="window.location.href='/EpidemicKnowledgeBase/knowledge'">健康知识库</button><br>
+</div>
+<div class="information">
+        <div class="tuichu">
+        <button class="login" onclick="window.location.href='/old'">退出</button>
+        <button class="login" onclick="window.location.href='/old/login/zc'">注册</button>
+    </div>
+    <p class="welcome">欢迎进入抗疫康养系统</p>
+</div>
+<p class="news">新闻轮播</p>
+<p class="version">版本号</p>
+<div class="main">
+    <img class="imgkangyi" src="/static/img/kangyi.png" alt="kangyi">
+    <div>
+        <div id="drop">
+            <button id="dropbtn" onclick="window.location.href='/BigDataAnalysis/yiqingAnalysis'">各省份疫情状况</button><br>
+            <div class="link"></div>
+            <button class="hidden" onclick="window.location.href='/BigDataAnalysis/'">疫情分析</button>
+            <form>
+                <input type="text" name="search" placeholder="输入您想查询的省份">
+            </form>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

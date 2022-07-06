@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>olderManBaseHTML</title>
+    <style>
+    body {
+        margin: 0;
+    }
+        .button {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: cadetblue;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+    </style>
+    <link rel="stylesheet" href="/static/css/base.css" type="text/css">
+    <link rel="icon" href="/static/img/kangyi.png">
+</head>
+<body>
+
+<p class="icon">抗疫康养系统</p>
+<div class="directory">
+    <button class="_title" onclick="window.location.href='/personalFile/personalHealth'">个人健康档案</button><br>
+    <button class="_title" onclick="window.location.href='/callCenter/callCenter'">呼叫中心</button><br>
+    <button class="_title" onclick="window.location.href='/BigDataAnalysis/yiqingAnalysis'">疫情分析</button><br>
+    <button class="_title" onclick="window.location.href='/BigDataAnalysis/yiqingmap'">疫情地图</button><br>
+    <button class="_title" onclick="window.location.href='/EpidemicKnowledgeBase/knowledge'">健康知识库</button><br>
+</div>
+<div class="information">
+        <div class="tuichu">
+        <button class="login" onclick="window.location.href='/old'">退出</button>
+        <button class="login" onclick="window.location.href='/old/login/zc'">注册</button>
+    </div>
+    <p class="welcome">欢迎进入抗疫康养系统</p>
+</div>
+<p class="news">新闻轮播</p>
+<p class="version">内测中</p>
+<div class="main">
+    <form method="post" action="/callCenter/callCenter1">
+        <input class="button" type="submit" name="submit" value="呼叫亲属">
+    </form>
+    <form method="post" action="/callCenter/callCenter2">
+        <input class="button" type="submit" name="submit" value="呼叫社区">
+    </form>
+    <div class="call">
+        <p><b>正在为您呼叫社区<br></b></p>
+    </div>
+</div>
+</body>
+</html>

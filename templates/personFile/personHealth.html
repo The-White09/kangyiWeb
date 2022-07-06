@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>olderManBaseHTML</title>
+    <style>
+    body {
+        margin: 0;
+    }
+    </style>
+    <link rel="stylesheet" href="/static/css/base.css" type="text/css">
+    <link rel="icon" href="/static/img/kangyi.png">
+</head>
+<body>
+
+<p class="icon">抗疫康养系统</p>
+<div class="directory">
+    <button class="_title" onclick="window.location.href='/personalFile/personalHealth'">个人健康档案</button><br>
+    <button class="_title" onclick="window.location.href='/callCenter/callCenter'">呼叫中心</button><br>
+    <button class="_title" onclick="window.location.href='/BigDataAnalysis/yiqingAnalysis'">疫情分析</button><br>
+    <button class="_title" onclick="window.location.href='/BigDataAnalysis/yiqingmap'">疫情地图</button><br>
+    <button class="_title" onclick="window.location.href='/EpidemicKnowledgeBase/knowledge'">健康知识库</button><br>
+</div>
+<div class="information">
+        <div class="tuichu">
+        <button class="login" onclick="window.location.href='/old'">退出</button>
+        <button class="login" onclick="window.location.href='/old/login/zc'">注册</button>
+    </div>
+    <p class="welcome">欢迎进入抗疫康养系统</p>
+</div>
+<p class="news">新闻轮播</p>
+<p class="version">版本号</p>
+{% block content %}
+
+<div class="main">
+    <img class="imgky" src="/static/img/kangyi.png" alt="kangyi" >
+    <table id="table">
+        <caption>个人健康档案</caption>
+        <tr>
+            <td class="first">姓名：</td>
+            <td>{{ user[1] }}</td>
+        </tr>
+        <tr>
+            <td class="first">身份证号：</td>
+            <td>{{ user[3] }}</td>
+        </tr>
+        <tr>
+            <td class="first">年龄：</td>
+            <td>{{ user[2] }}</td>
+        </tr>
+        <tr>
+            <td class="first">住址：</td>
+            <td>{{ user[4] }}</td>
+        </tr>
+        <tr>
+            <td class="first">联系方式：</td>
+            <td>{{ user[5] }}</td>
+        </tr>
+        <tr>
+            <td class="first">健康状况：</td>
+            <td>TD</td>
+        </tr>
+        <tr>
+            <td class="first">核酸检测结果：</td>
+            <td>TD</td>
+        </tr>
+        <tr>
+            <td class="first">疫苗接种情况：</td>
+            <td>TD</td>
+        </tr>
+    </table>
+</div>
+{% endblock %}
+</body>
+</html>
